@@ -89,3 +89,26 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Explain how your team approached the design and testing process
 
 // ✅ Bonus: Can you extend any of the functions to be more flexible or reusable?
+
+
+
+function generateBadge(name, role){
+    return `Name: ${name}, Role: ${role}.`;
+}
+console.log(generateBadge("Alice", "Speaker"));
+
+function calculateCost(numAttendees, cost){
+    let totalCost = numAttendees * cost;
+        if (numAttendees > 100) {
+            totalCost *= 0.9
+        }
+    return totalCost
+}
+console.log(calculateCost(110,20));
+console.log(calculateCost(20,20));
+
+function validateEmail(email){
+    return email.includes("@") && email.includes(".");
+}
+console.log(validateEmail("testemail@email.com"));
+console.log(validateEmail("thisisnotanemail.com"));
